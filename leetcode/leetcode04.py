@@ -27,6 +27,7 @@ class Solution:
             return nums[index]
     
     def findMedianSortedArrays_v2(self, nums1: List[int], nums2: List[int]) -> float:
+        # 有空处理下，不需要额外空间的方法，有点问题，几十个用例过不了
         len_nums1 = len(nums1)
         len_nums2 = len(nums2)
         length = len_nums1 + len_nums2
