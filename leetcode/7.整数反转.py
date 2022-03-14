@@ -19,13 +19,7 @@ class Solution:
         else:
             s = str(x)
         s = s[::-1]
-        zero = 0
-        for index, each in enumerate(s):
-            if each == "0":
-                zero += 1
-            else:
-                break
-        s = int(s[zero:])
+        s = int(s)
         if negative:
             s = -s
         if s<MIN or s>MAX:
