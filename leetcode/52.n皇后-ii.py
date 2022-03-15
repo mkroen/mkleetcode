@@ -1,3 +1,10 @@
+#
+# @lc app=leetcode.cn id=52 lang=python3
+#
+# [52] N皇后 II
+#
+
+# @lc code=start
 class Solution:
     def totalNQueens(self, n: int) -> int:
         class setdata:
@@ -32,16 +39,5 @@ class Solution:
                         new_turn.append(setdata(newset1, newset2, newset3))                        
             turns = new_turn
         return len(turns)
+# @lc code=end
 
-# 执行用时：56 ms, 在所有 Python3 提交中击败了42.55%的用户
-# 内存消耗：22.4 MB, 在所有 Python3 提交中击败了5.42%的用户
-# 通过测试用例：9 / 9
-
-# 算出来提交↓
-
-# class Solution:
-#     def totalNQueens(self, n: int) -> int:
-#         return {1:1,2:0,3:0,4:2,5:10,6:4,7:40,8:92,9:352}.get(n) # type: ignore
-# 执行用时：28 ms, 在所有 Python3 提交中击败了99.28%的用户
-# 内存消耗：14.8 MB, 在所有 Python3 提交中击败了96.12%的用户
-# 通过测试用例：9 / 9

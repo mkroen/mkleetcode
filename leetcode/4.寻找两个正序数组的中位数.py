@@ -1,5 +1,10 @@
+#
+# @lc app=leetcode.cn id=4 lang=python3
+#
+# [4] 寻找两个正序数组的中位数
+#
 from typing import List
-
+# @lc code=start
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         nums = []
@@ -68,6 +73,7 @@ class Solution:
                 break
             tag += 1
         return sum(ans)/len(ans)
+# @lc code=end
 
 S = Solution()
 a = [1,3]
