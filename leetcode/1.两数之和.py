@@ -8,11 +8,13 @@ from typing import List
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         hashmap = {}
+        hset = set()
         for index, num in enumerate(nums):
             num_2 = target - num
-            if num_2 in hashmap:
+            if num_2 in hset:
                 return [hashmap[num_2], index]
             hashmap[num] = index
+            hset.add(num)
         return []
 # @lc code=end
 
