@@ -5,8 +5,6 @@
 #
 
 # @lc code=start
-from types import resolve_bases
-
 
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
