@@ -11,6 +11,20 @@ class TreeNode:
         self.left = left
         self.right = right
 
+    def __repr__(self) -> str:
+        from collections import deque
+        dq = deque([self])
+        l = []
+        while dq:
+            n = dq.popleft()
+            if n:
+                l.append(n.val)
+                dq.append(n.left)
+                dq.append(n.right)
+            else:
+                l.append(n)
+        return " ".join(map(str, l))
+
 
 class CBTInserter:
 
@@ -44,8 +58,13 @@ class CBTInserter:
     def get_root(self) -> TreeNode:
         return self.root
 
+
 # Your CBTInserter object will be instantiated and called as such:
 # obj = CBTInserter(root)
 # param_1 = obj.insert(val)
 # param_2 = obj.get_root()
 # @lc code=end
+root = TreeNode(1)
+C = CBTInserter(root)
+C.insert(2)
+print(C.get_root())
